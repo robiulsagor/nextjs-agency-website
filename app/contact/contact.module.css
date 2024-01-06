@@ -43,3 +43,15 @@
 .formSubmit:hover {
     background: var(--bgSoft);
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imgContainer {
+        display: none;
+    }
+}

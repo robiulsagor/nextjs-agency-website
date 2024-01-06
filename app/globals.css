@@ -36,6 +36,11 @@ a {
   overflow: hidden !important;
 }
 
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+}
+
 .mobileMenu {
   position: absolute;
   background: var(--bg);

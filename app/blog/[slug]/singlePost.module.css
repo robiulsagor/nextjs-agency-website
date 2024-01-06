@@ -43,6 +43,30 @@
     margin-bottom: 5px;
 }
 
+.descValue {
+    font-weight: 600;
+}
+
 .avatar {
     border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .imgContainer {
+        display: none;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .desc {
+        gap: 20px;
+    }
+
+    .descCard {
+        font-size: 13px;
+    }
 }

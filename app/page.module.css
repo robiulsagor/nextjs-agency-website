@@ -36,11 +36,36 @@
 
 .brandsContainer {
   position: relative;
-  width: 500px;
+  /* width: 500px; */
   height: 50px;
 }
 
 .imgContainer {
   flex: 1;
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    font-size: 60px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imgContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    font-size: 30px;
+  }
 }

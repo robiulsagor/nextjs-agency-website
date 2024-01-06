@@ -30,12 +30,14 @@
     color: #cfcfcf;
     line-height: 20px;
     letter-spacing: 1px;
+    text-align: justify;
 }
 
 .cardContainer {
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -62,4 +64,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutHeader {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .imgContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .aboutHeader {
+        font-size: 29px;
+        text-align: center;
+    }
+
+    .cardContainer {
+        gap: 0px;
+    }
+
+    .card {
+        text-align: center;
+    }
 }
