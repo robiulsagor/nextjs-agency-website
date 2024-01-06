@@ -1,16 +1,19 @@
 import Image from "next/image";
 import styles from "./singlePost.module.css"
+import { getSinglePost } from "@/actions/getPosts";
 
-const SinglePost = ({ params }) => {
+const SinglePost = async ({ params }) => {
     console.log(params);
     const { slug } = params
+    const post = await getSinglePost(slug)
+    console.log(post);
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>
                 <Image src="https://images.pexels.com/photos/15241238/pexels-photo-15241238/free-photo-of-asphalt-road-through-desert.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="img" fill className={styles.img} />
             </div>
             <div className={styles.textContainer}>
-                <h2 className={styles.title}>Title of the post</h2>
+                <h2 className={styles.title}>{post?.title} </h2>
                 <div className={styles.desc}>
                     <Image src={"https://images.pexels.com/photos/19133309/pexels-photo-19133309/free-photo-of-young-woman-in-a-hijab-walking-in-front-of-a-monumental-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"} alt="avatar" width={50} height={50} className={styles.avatar} />
 
@@ -24,8 +27,8 @@ const SinglePost = ({ params }) => {
                     </div>
                 </div>
 
-                <p className={styles.content}> this is the content of the post. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, velit maiores obcaecati iusto ratione saepe eos minima dolorem. Commodi tenetur in exercitationem omnis sint ex sapiente, cumque voluptatem maiores minus? Totam vel cumque suscipit eum, asperiores odio. Laboriosam, magni facilis illo expedita consectetur a nulla? Sequi fuga sed dolorem, incidl earum eveniet! Quam quod mollitia dolores eos dicta distinctio maxime alias iste voluptate, rem aliquid deleniti obcaecati et corrupti culpa cum similique adipisci sequi perspiciatis qui nostrum doloremque. Deleniti voluptatem voluptates nostrum corrupti obcaecati, sequi inventore aperiam? Itaque, corrupti.
-
+                <p className={styles.content}>
+                    {post?.body}
 
                 </p>
 

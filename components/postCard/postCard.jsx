@@ -1,8 +1,10 @@
 import Image from "next/image"
 import styles from "./postCard.module.css"
 import Link from "next/link"
+import { getPosts } from "@/actions/getPosts"
 
-const PostCard = () => {
+const PostCard = async ({ post }) => {
+
     return (
         <div className={styles.container}>
             <div className={styles.top}>
@@ -14,9 +16,9 @@ const PostCard = () => {
             </div>
 
             <div className={styles.bottom}>
-                <h4 className={styles.title}>Title Lorem ipsum dolor sit amet. lorem Lorem ipsum dolor sit amet.</h4>
-                <p className={styles.desc}>This is desc of this post. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, aut.</p>
-                <Link href={'/blog/abcd'} className={styles.readMore}>read more</Link>
+                <h4 className={styles.title}>{post.title} </h4>
+                <p className={styles.desc}>{post.body.slice(0, 55)}... </p>
+                <Link href={`/blog/${post.id}`} className={styles.readMore}>read more</Link>
             </div>
         </div>
     )
