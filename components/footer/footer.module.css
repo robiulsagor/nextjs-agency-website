@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.container>*:first-child {
+    font-weight: bold;
+}
+
+.container>*:last-child {
+    font-size: small;
+    color: #aaa;
+}

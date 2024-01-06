@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+}
+
+.logout {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.mobileBtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        display: none;
+    }
+
+    .mobileBtn {
+        display: block;
+    }
+}
