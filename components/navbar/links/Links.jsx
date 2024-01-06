@@ -52,13 +52,25 @@ const Links = () => {
 
             <button className={styles.mobileBtn} onClick={() => setOpen(prev => !prev)}>Menu</button>
 
-            <div className={open ? 'mobileMenu' : 'mobileMenu active'}>
+            {/* <div className={open ? 'mobileMenu active' : 'mobileMenu '}>
                 {
                     linkList.map(link => (
                         <NavLink item={link} key={link.title} />
                     ))
                 }
-            </div>
+            </div> */}
+
+            {
+                open && (
+                    <div className="mobileMenu">
+                        {
+                            linkList.map(link => (
+                                <NavLink item={link} key={link.title} />
+                            ))
+                        }
+                    </div>
+                )
+            }
 
         </div>
 

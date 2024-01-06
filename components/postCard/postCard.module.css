@@ -1,0 +1,49 @@
+.container {}
+
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.imgContainer {
+    position: relative;
+    width: 90%;
+    height: 300px;
+}
+
+.img {
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.date {
+    transform: rotate(90deg);
+    display: block;
+    height: 100%;
+}
+
+.bottom {
+    margin-top: 15px;
+}
+
+.title {
+    margin-bottom: 10px;
+    width: 85%;
+}
+
+.desc {
+    font-size: 16px;
+    color: gray;
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+.readMore {
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: small;
+}
+
+.readMore:hover {
+    text-decoration: none;
+}
