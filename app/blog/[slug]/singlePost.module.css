@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    gap: 50px;
+    margin: 30px 0;
+    align-items: flex-start;
+}
+
+.imgContainer {
+    flex: 1;
+    position: relative;
+    /* height: 500px; */
+    min-height: calc(100vh - 200px);
+}
+
+.img {
+    object-fit: contain;
+}
+
+.textContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.desc {
+    display: flex;
+    gap: 30px;
+}
+
+.descCard {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.descTitle {
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
