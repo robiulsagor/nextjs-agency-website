@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    gap: 100px;
+}
+
+.imgContainer {
+    position: relative;
+    flex: 1
+}
+
+.formContainer {
+    flex: 1
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input, .textarea {
+    padding: 13px 10px;
+    outline: none;
+    font-family: inherit;
+    background: var(--bgSoft);
+    border: none;
+    color: var(--text);
+    border-radius: 3px;
+}
+
+.formSubmit {
+    background: var(--btn);
+    padding: 15px;
+    color: var(--text);
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.formSubmit:hover {
+    background: var(--bgSoft);
+}
